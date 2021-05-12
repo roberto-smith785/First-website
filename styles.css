@@ -1,0 +1,633 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    Font-size: 16px;
+    font-Family: default;
+    font-weight: 400, 500, 700;
+    width: 1440px;
+    background-color: #e5e6dec0;
+}
+
+.loader-container {
+    position: absolute;
+    top: 265px;
+    left: 700px;
+    transform-origin: bottom center;
+    animation: rotate 4s linear infinite;
+}
+
+.loaders {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: grow 1.5s linear infinite;
+    margin: -10px;
+    transition: 0.25s;
+}
+
+.loader1 {
+    background-color: darkgrey;
+    filter: brightness(1);
+}
+
+.loader2 {
+    background-color: black;
+    animation-delay: 0.75s;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1);
+    }
+}
+
+.welcome-msg {
+    position: absolute;
+    left: 550px;
+    top: 350px;
+    align-items: center;
+    transform: translate(-8px, -8px);
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+}
+
+.welcome-msg p {
+    font-size: 25px;
+    font-weight: 800;
+    color: green;
+    overflow: hidden;
+    visibility: hidden;
+    animation: hiddenLetter 0.3s cubic-bezier(0, -0.02, 1, 1.43) forwards 1;
+}
+
+@keyframes hiddenLetter {
+    from {
+        visibility: hidden;
+        /*transform: translate3d(-45px, 45px, -45px);*/
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(85deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    80% {
+        transform: rotate(275deg);
+    }
+    to {
+        visibility: visible;
+        /*transform:translate3d(0,40px,0);*/
+        transform: rotate(360deg);
+    }
+}
+
+.welcome-msg p:nth-child(1) {
+    animation-delay: 0.6s
+}
+
+.welcome-msg p:nth-child(2) {
+    animation-delay: 0.9s
+}
+
+.welcome-msg p:nth-child(3) {
+    animation-delay: 1.2s;
+}
+
+.welcome-msg p:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.welcome-msg p:nth-child(5) {
+    animation-delay: 1.8s;
+}
+
+.welcome-msg p:nth-child(6) {
+    animation-delay: 2.1s;
+}
+
+.welcome-msg p:nth-child(7) {
+    animation-delay: 2.4s;
+}
+
+.front-pledge-divs:hover {
+    background: lightgray;
+    transition: all 0.25s ease-in;
+}
+
+body p {
+    color: gray;
+}
+
+ul li a {
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+ul li a:focus {
+    color: black;
+    text-decoration: underline;
+    transition: all 0.25s ease-in;
+}
+
+body a {
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 90px;
+    padding-right: 170px;
+    padding-top: 50px;
+    height: 400px;
+    background-image: url("images/image-hero-desktop.jpg");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    overflow: hidden;
+    color: white;
+}
+
+.nav-bar ul {
+    padding-top: 38px;
+    list-style: none;
+    display: flex;
+    grid-gap: 30px;
+}
+
+.nav-bar ul li p {
+    text-decoration: none;
+    color: white;
+}
+
+.body-content,
+.selected {
+    width: 720px;
+    position: absolute;
+    top: 310px;
+    left: 350px;
+}
+
+fieldset div {
+    display: flex;
+    justify-content: space-between;
+}
+
+fieldset h1 {
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 18px;
+}
+
+fieldset p {
+    text-align: center;
+    padding-bottom: 33px;
+}
+
+.mastercraft-section fieldset,
+.selected {
+    background-color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 44px;
+    border-radius: 10px;
+    border: 0;
+}
+
+.about-project {
+    padding: 50px;
+    border: 0;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.money-section {
+    padding-bottom: 110px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 0;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#separate {
+    height: 50px;
+}
+
+.about-project :is(h2,
+p) {
+    padding-bottom: 40px;
+}
+
+.bamboo,
+.black-edition,
+.mahogany,
+.no-reward,
+.pledge-bamboo,
+.pledge-black-edition,
+.pledge-mahogany {
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.content-head,
+.left-reward {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stock {
+    display: flex;
+}
+
+.stock p {
+    font-size: 10px;
+}
+
+.stock h3 {
+    font-weight: 900;
+    font-stretch: semi-expanded;
+}
+
+:is(.bamboo,
+.black-edition,
+.mahogany) p {
+    padding-bottom: 30px;
+}
+
+.black-edition,
+.bamboo,
+.mahogany,
+.no-reward,
+.pledge-bamboo,
+.pledge-black-edition,
+.pledge-mahogany {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding: 30px;
+}
+
+.content-pledge {
+    color: hsl(176, 50%, 47%);
+    font-size: 12px;
+}
+
+.btn-select {
+    width: 150px;
+    border-radius: 24px;
+    border: 0;
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+}
+
+.btn-top p {
+    color: white;
+}
+
+.btn-top {
+    width: 180px;
+    height: 60px;
+    border-radius: 33px;
+    border: 0;
+    color: white;
+    padding-top: 18px;
+    padding-bottom: 20px;
+    padding-left: 32px;
+    padding-right: 33px;
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    transition: all 0.2s ease-out;
+}
+
+.btn-top:nth-child(2) img {
+    width: 50px;
+    height: 60px;
+    padding: 0;
+    padding-right: 5px;
+    margin: 0px;
+    position: absolute;
+    left: 0px;
+    top: 1px;
+    overflow: hidden;
+}
+
+.btn-top:nth-child(2) p {
+    position: absolute;
+    left: 75px;
+}
+
+button:hover {
+    background-color: hsl(176, 72%, 28%);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: darkgrey;
+}
+
+progress {
+    position: absolute;
+    top: 470px;
+    width: 640px;
+    height: 18px;
+}
+
+#bookmark {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    grid-gap: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    left: 666.5px;
+    transform: translateY(-12px);
+}
+
+.close-btn>button {
+    background-color: white;
+    border: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.selected {
+    padding-top: 53px;
+    width: 621px;
+    position: absolute;
+    top: 320px;
+    left: 350px;
+}
+
+.selected-head h1 {
+    padding-bottom: 20px;
+}
+
+.selected-head p {
+    padding-bottom: 32px;
+}
+
+
+/*#selected-reward-left {
+    top:0px;
+	width:50px;
+}*/
+
+.pledge-head h5:hover {
+    color: hsl(176, 50%, 47%);
+    cursor: pointer;
+}
+
+.enter-pledge {
+    justify-content: space-between;
+}
+
+.pledge-head {
+    display: grid;
+    grid-template-columns: repeat(3, 170px);
+    padding-bottom: 15px;
+    justify-content: space-between;
+}
+
+:is(.no-reward,
+.pledge-bamboo,
+.pledge-black-edition,
+.pledge-mahogany) p {
+    padding-bottom: 33px;
+}
+
+.no-reward,
+.pledge-bamboo,
+.pledge-black-edition,
+.pledge-mahogany {
+    display: flex;
+    grid-gap: 5px;
+}
+
+
+/*.no-reward,.pledge-bamboo,.pledge-black-edition,.pledge-mahogany{
+	border: 1px solid gray;
+	width:640px;
+	padding:30px;
+	border-radius:10px;
+}*/
+
+.enter-ur-pledge {
+    padding-top: 21px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.enter-ur-pledge h5 {
+    line-height: 50px;
+    color: gray;
+}
+
+hr {
+    position: absolute;
+    width: 616px;
+    margin-left: -50px;
+}
+
+.selected button[type="submit"] {
+    width: 100px;
+    border-radius: 26px;
+    border: 0;
+    color: white;
+    padding: 18px;
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    text-align: center;
+    transition: all 0.001s ease-out;
+}
+
+.selected button[type="submit"]:first-child {
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+}
+
+input[type="radio"] {
+    text-align: center;
+    position: relative;
+    top: -8px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked:before {
+    border-radius: 30px;
+}
+
+button[type="submit"]:active {
+    background-color: gray;
+    color: dark-gray;
+}
+
+button[type="submit"]:hover {
+    background-color: hsl(176, 72%, 28%);
+    cursor: pointer;
+}
+
+button[type="submit"]:nth-child(1):hover:after {
+    content: ' |';
+    pointer-events: none;
+}
+
+.pledge-success {
+    position: absolute;
+    top: 200px;
+    left: 90px;
+    background-color: white;
+    display: inline-block;
+    width: 500px;
+    height: 450px;
+    padding-right: 50px;
+}
+
+.pledge-success img {
+    padding-top: 50px;
+    margin-left: 230px;
+    padding-bottom: 50px;
+    width: 90px;
+    height: 90px;
+}
+
+.pledge-success h3 {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-left: 80px;
+}
+
+.pledge-success p {
+    margin-left: 50px;
+    padding-bottom: 33px;
+    text-align: center;
+}
+
+#sucess-btn {
+    margin-left: 230px;
+}
+
+
+/*
+@media(min-width:375px){
+	*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	Font-size: 16px;
+	font-Family: [Commissioner](https://fonts.google.com/specimen/Commissioner);
+	font-weight: 400, 500, 700;
+	width:375px;
+	background-color:#F5F5F5;
+
+}
+ul li a{
+	font-size:10px;
+	transition:all 0.3s ease-in-out;
+}
+.header{
+	display:flex;
+	justify-content:space-between;
+	padding-left:30px;
+	padding-right:56px;
+	padding-top:15px;
+	height:300px;
+	background-image:url("images/image-hero-desktop.jpg");
+	background-position:center;
+	background-repeat:none;
+	background-size:cover;
+	overflow:hidden;
+	color:white;
+}
+.nav-bar ul{
+	padding-top:15px;
+	list-style:none;
+	display:flex;
+	grid-gap:20px;
+}
+
+.body-content,.selected{
+	width:328px;
+	position:absolute;
+	top:240px;
+	left:22px;
+}
+.mastercraft-section fieldset,.selected{
+	background-color:white;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:44px;
+	border-radius:5px;
+	border:0;
+}
+.money-section{
+	padding-bottom:80px;
+	padding-top:20px;
+	padding-left:18px;
+	padding-right:18px;
+	border:0;
+	background-color:white;
+	border-radius:5px;
+	display:flex;
+	justify-content:space-between;
+}
+progress{
+	position:absolute;
+	top:500px;
+	width:215px;
+	height:18px;
+}
+
+.btn-select{
+	width:100px;
+	border-radius:24px;
+	border:0;
+	background-color:hsl(176, 50%, 47%);
+	color:white;
+}
+.selected button[type="submit"]{
+	width:80px;
+	border-radius:26px;
+	border:0;
+	color:white;
+	padding:18px;
+	background-color:hsl(176, 50%, 47%);
+	color:white;
+	text-align:center;
+	transition:all 0.001s ease-out;
+}
+hr{
+	position:absolute;
+	width:216px;
+	margin-left:-50px;
+	
+}
+}
+*/
